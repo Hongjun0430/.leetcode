@@ -5,19 +5,20 @@
  */
 
 // @lc code=start
-class Solution {
+class Solution
+{
 public:
-    bool isAnagram(string s, string t) {
-        if(s.length()!=t.length()){
+    bool isAnagram(string s, string t)
+    {
+        if (s.length() != t.length())
+        {
             return 0;
         }
 
-        sort(s.begin(),s.end());
-        sort(t.begin(),t.end());
+        sort(s.begin(), s.end());
+        sort(t.begin(), t.end());
 
-        return s==t;
-
+        return s == t;
     }
 };
 // @lc code=end
-
