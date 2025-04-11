@@ -6,20 +6,22 @@
 
 // @lc code=start
 class Solution {
-public:
-    vector<int> twoSum(vector<int>& numbers, int target) {
-        for (int i = 0; i < numbers.size(); ++i)
-        {
-            for (int j = i + 1; j < numbers.size(); ++j)
-            {
-                if (numbers[i] + numbers[j] == target)
-                {
-                    return {i+1, j+1};
+    public:
+        vector<int> twoSum(vector<int>& numbers, int target) {
+            int left=0,right=numbers.size()-1;
+            while(1){
+                int sum=numbers[left]+numbers[right];
+                if(sum==target){
+                    return {left+1,right+1};
+                }
+                else if(sum>target){
+                    right-=1;
+                }
+                else{
+                    left+=1;
                 }
             }
         }
-        return {};
-    }
 };
 // @lc code=end
 
